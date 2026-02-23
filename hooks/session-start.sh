@@ -1,6 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
+# jq is required for parsing JSON state
+if ! command -v jq &>/dev/null; then
+  echo "[Overseer] Warning: jq is not installed. Install it with 'brew install jq' or 'apt-get install jq' for full session state support." >&2
+  exit 0
+fi
+
 STATE_FILE=".claude/overseer/state.json"
 RUBRIC_FILE=".claude/overseer/rubric.yml"
 

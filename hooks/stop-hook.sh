@@ -1,6 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
+# jq is required for parsing pipeline state
+if ! command -v jq &>/dev/null; then
+  echo "[Overseer] Error: jq is not installed. Install it with 'brew install jq' or 'apt-get install jq'. Releasing stop hook." >&2
+  exit 0
+fi
+
 HOOK_INPUT=$(cat)
 OVERSEER_STATE=".claude/overseer/active-pipeline.json"
 
