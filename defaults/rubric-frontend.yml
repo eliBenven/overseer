@@ -1,0 +1,47 @@
+type: frontend
+thresholds:
+  functional: pass
+  quality: 8
+  ambition: 7
+max_iterations:
+  functional: 10
+  quality: 5
+  ambition: 3
+
+quality_criteria:
+  - "Layout should feel intentional, not auto-generated"
+  - "Typography should have personality — not default Inter/system font"
+  - "Color palette must be cohesive with clear hierarchy"
+  - "Must have micro-interactions on buttons and links (hover, focus, active)"
+  - "Mobile must look designed-for-mobile, not just responsive"
+  - "Spacing and padding should be consistent and generous"
+  - "Visual hierarchy must guide the eye — clear primary/secondary/tertiary"
+  - "Images and media should feel curated, not stock"
+
+ambition_criteria:
+  - "At least one moment that makes someone pause and notice"
+  - "Something technically impressive visible above the fold"
+  - "Copy should be specific to this brand, not interchangeable with any other site"
+  - "The overall impression should be 'a human designer made this'"
+
+anti_patterns:
+  - "Generic Tailwind card grids with equal-sized cards"
+  - "Stock photo hero sections with generic headline"
+  - "Default shadcn/radix components with no customization"
+  - "Cookie-cutter SaaS layouts (hero → features → pricing → CTA)"
+  - "Uniform section padding with no rhythm variation"
+  - "No animation or movement anywhere on the page"
+  - "System font stack with no typographic personality"
+
+screenshots:
+  viewports:
+    - { width: 1440, height: 900, label: "desktop" }
+    - { width: 768, height: 1024, label: "tablet" }
+    - { width: 390, height: 844, label: "mobile" }
+  capture:
+    - route: "/"
+      label: "homepage"
+      full_page: true
+    - route: "/"
+      label: "homepage-above-fold"
+      full_page: false

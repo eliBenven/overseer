@@ -1,0 +1,25 @@
+type: cli
+thresholds:
+  functional: pass
+  quality: 8
+  ambition: 6
+max_iterations:
+  functional: 10
+  quality: 4
+  ambition: 2
+
+quality_criteria:
+  - "Help text should be clear, complete, and well-formatted"
+  - "Error messages should tell the user what to do next"
+  - "Output should be structured and use color appropriately"
+  - "Exit codes should be meaningful (0 = success, 1 = error, 2 = usage)"
+  - "Progress feedback for long operations"
+
+ambition_criteria:
+  - "Should feel delightful to use — good defaults, smart suggestions"
+  - "Output should be both human-readable and machine-parseable (--json flag)"
+
+anti_patterns:
+  - "Wall of text with no formatting"
+  - "Silent failures"
+  - "No --help or incomplete --help"

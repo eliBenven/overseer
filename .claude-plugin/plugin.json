@@ -1,0 +1,9 @@
+{
+  "name": "overseer",
+  "description": "Autonomous quality gate for Claude Code. Builds, visually verifies, iterates on quality, and deploys — without human intervention.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Eli Benveniste"
+  },
+  "keywords": ["quality", "autonomous", "visual-testing", "deployment", "verification"]
+}

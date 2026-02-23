@@ -1,0 +1,25 @@
+type: backend
+thresholds:
+  functional: pass
+  quality: 8
+  ambition: 6
+max_iterations:
+  functional: 10
+  quality: 4
+  ambition: 2
+
+quality_criteria:
+  - "API responses should have consistent shape and error format"
+  - "Error messages should tell the consumer what went wrong and how to fix it"
+  - "Response times should be reasonable (< 500ms for simple endpoints)"
+  - "Input validation should be thorough with clear error messages"
+  - "Logging should be structured and useful for debugging"
+
+ambition_criteria:
+  - "API design should feel thoughtful — good resource naming, consistent verbs"
+  - "Documentation should be auto-generated or comprehensive"
+
+anti_patterns:
+  - "Generic 500 errors with no context"
+  - "Inconsistent response shapes across endpoints"
+  - "No input validation"
